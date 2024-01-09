@@ -1,6 +1,3 @@
-local gangLaenge = 40
-local gangAnzahl = 10
-
 function main(gangLaenge, gangAnzahl)
     for i = 1, gangAnzahl do
         grabGang(gangLaenge)
@@ -12,8 +9,6 @@ function move(laenge)
     for i = 1, laenge do
         turtle.forward()
     end
-    
-    
 end
 function grabGang(gangLaenge)
     for i = 1, gangLaenge do
@@ -34,4 +29,4 @@ function turnAround()
     turtle.turnLeft()
 end
 
-main(gangLaenge, gangAnzahl)
+main(40, 10)
