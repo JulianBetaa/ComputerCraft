@@ -6,6 +6,7 @@ function main(gangLaenge, gangAnzahl)
         move(gangLaenge)
         grabGang(gangLaenge)
         turnAround()
+        move(gangLaenge)
         makeUturn()
     end
 end
