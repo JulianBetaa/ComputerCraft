@@ -1,3 +1,5 @@
+main(5, 3)
+
 function main(gangLaenge, gangAnzahl)
     for i = 1, gangAnzahl do
         grabGang(gangLaenge)
@@ -9,6 +11,7 @@ function main(gangLaenge, gangAnzahl)
 end
 function makeUturn()
     turtle.turnLeft()
+    digAndMoveForward()
     digAndMoveForward()
     digAndMoveForward()
     turtle.turnLeft()
@@ -37,5 +40,3 @@ function turnAround()
     turtle.turnLeft()
     turtle.turnLeft()
 end
-
-main(40, 10)
