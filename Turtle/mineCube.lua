@@ -1,5 +1,3 @@
-main(20, 15)
-
 function main(gangLaenge, gangAnzahl)
     turtle.turnLeft()
     for i = 1, gangAnzahl do
@@ -43,3 +41,5 @@ function turnAround()
     turtle.turnLeft()
     turtle.turnLeft()
 end
+
+main(20, 15)
