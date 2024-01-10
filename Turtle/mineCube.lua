@@ -8,7 +8,7 @@ function main(gangLaenge, gangAnzahl)
         turnAround()
         move(gangLaenge)
         makeUturn()
-        if !hasInventorySpace then
+        if hasInventorySpace then
             break
         end
     end
@@ -45,9 +45,9 @@ function turnAround()
     turtle.turnLeft()
     turtle.turnLeft()
 end
-function hasInventorySpace()
+function isFull()
     if turtle.getItemCount == 0 then
-        return true
+        return false
     end
 end
 turtle.select(16)
