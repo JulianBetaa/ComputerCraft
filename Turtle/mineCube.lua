@@ -8,9 +8,11 @@ function main(gangLaenge, gangAnzahl)
         turnAround()
         move(gangLaenge)
         makeUturn()
-        if hasInventorySpace then
+        turtle.select(16)
+        if isFull then
             break
         end
+        turtle.select(1)
     end
 end
 function makeUturn()
@@ -50,5 +52,4 @@ function isFull()
         return false
     end
 end
-turtle.select(16)
 main(20, 30)
