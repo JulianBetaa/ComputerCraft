@@ -8,7 +8,7 @@ function main(gangLaenge, gangAnzahl)
         turnAround()
         move(gangLaenge)
         makeUturn()
-        if hasInventorySpace then
+        if !hasInventorySpace then
             break
         end
     end
