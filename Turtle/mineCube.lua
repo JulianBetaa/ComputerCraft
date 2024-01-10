@@ -13,8 +13,8 @@ end
 function makeUturn()
     turtle.turnRight()
     digAndMoveForward()
-    digAndMoveForward()
-    digAndMoveForward()
+    -- digAndMoveForward()
+    -- digAndMoveForward()
     turtle.turnLeft()
 end
 function move(laenge)
@@ -29,15 +29,25 @@ function grabGang(gangLaenge)
 end
 
 function digAndMoveForward()
-    while turtle.detect() do
-        turtle.dig()
-        sleep(0.5)
+    if hasInventorySpace then 
+        while turtle.detect() do
+            turtle.dig()
+            sleep(0.5)
+        end
+        turtle.forward()
+        turtle.digUp()
     end
-    turtle.forward()
-    turtle.digUp()
 end
 function turnAround()
     turtle.turnLeft()
     turtle.turnLeft()
 end
-main(20, 15)
+function hasInventorySpace()
+    for x =1, 16 do
+        if turtle.select(x) == 0 then
+            return true 
+        end
+    end
+
+end
+main(20, 30)
