@@ -46,9 +46,9 @@ function turnAround()
     turtle.turnLeft()
 end
 function hasInventorySpace()
-    turtle.select(16)
     if turtle.getItemCount == 0 then
         return true
     end
 end
+turtle.select(16)
 main(20, 30)
